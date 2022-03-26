@@ -1,20 +1,30 @@
 {
-  "name": "alexa",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "yashu-alexa-skill",
+  "version": "0.0.1",
+  "description": "An example Alexa Skill project using the alexa-app module with Express.",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samplander/alexa.git"
+    "url": "git+https://github.com/puttareddy/yashu-alexa-skill.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "alexa",
+    "amazon",
+    "echo",
+    "skills"
+  ],
+  "author": "Puttaiah Arugunta",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/samplander/alexa/issues"
+    "url": "https://github.com/puttareddy/yashu-alexa-skill/issues"
   },
-  "homepage": "https://github.com/samplander/alexa#readme"
+  "dependencies": {
+    "alexa-app": "^4.0.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
 }
