@@ -26,8 +26,17 @@ alexaApp.express({
 // from here on you can setup any other express routes or middlewares as normal
 app.set("view engine", "ejs");
 
+
+//This code is universal to call an api
+async function getRemoteData(url){
+  const client = url.startsWith('https') ? require('https') : require('http');
+  const request = await client.get(url);
+}
+
+
 alexaApp.launch(function(request, response) {
-  response.say("Juanita, you husband is a very clever!");
+  getRemoteData('http://remote:remote@105.208.44.88:8008/scada-remote?m=json&r=cbus1&c=set&matchnet=0&matchapp=56&matchgrp=8&value=0');
+  response.say("Boooooom, the light are now off!");
 });
 
 alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
